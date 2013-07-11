@@ -11,7 +11,7 @@ cv::Mat frame, thresh;
 
 cv::Mat threshold( const cv::Mat &img , cv::Scalar lower , cv::Scalar upper )
 {
-  cv::Mat result;
+	cv::Mat result;
 	cv::Mat thresh;
 
 	thresh.create( img.size() , img.type() );
@@ -36,7 +36,6 @@ int main( int argc , const char **argv )
 
 	std::cout << "IP: ";
 	std::cin >> remoteAddr;
-
 	std::cout << remoteAddr << std::endl;
 	
 	cv::VideoCapture camera( remoteAddr );
@@ -66,6 +65,8 @@ int main( int argc , const char **argv )
 		if( cv::waitKey( 30 ) >= 0 )
 			break;
 	}
+	
+	cv::destroyAllWindows();
 
 	return 0;
 }
