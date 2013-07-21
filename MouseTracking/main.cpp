@@ -6,7 +6,7 @@
 
 struct MousePointer
 {
-  int x;
+	int x;
 	int y;
 };
 
@@ -91,7 +91,7 @@ int main( int argc , char *argv[] )
 
 			imshow( "Mouse Tracking" , img );
 			
-			key = static_cast< char >( cv::waitKey( 100 ) );
+			key = static_cast< char >( cv::waitKey( 10 ) );
 
 			if( key > 0 )
 				break;			
