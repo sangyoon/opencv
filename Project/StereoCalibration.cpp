@@ -45,6 +45,9 @@ int main( int argc , char** argv )
 
 		cv::cvtColor(  leftEye ,  leftGray , cv::COLOR_BGR2GRAY );
 		cv::cvtColor( rightEye , rightGray , cv::COLOR_BGR2GRAY );
+		
+		found[ 0 ] = cv::findChessboardCorners(  leftEye , boardSize , corners[ 0 ] , cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FILTER_QUADS );
+		found[ 1 ] = cv::findChessboardCorners( rightEye , boardSize , corners[ 1 ] , cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FILTER_QUADS );
 
 		if( found[ 0 ] )
 		{
