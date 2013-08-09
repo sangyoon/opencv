@@ -106,7 +106,7 @@ int main( int argc , char** argv )
 
 		cv::FileStorage fs( "CalibrationData.yml" , cv::FileStorage::WRITE );
 		fs << "CM1" << CM1 << "CM2" << CM2 << "D1" << D1 << "D2" << D2 << "R" << R << "T" << T << "E" << E << "F" << F;
-	std::cout << "Done Rectification!" << std::endl;
+	std::cout << "Done Calibration!" << std::endl;
 
 	std::cout << "Start Rectification..." << std::endl;
 		cv::Mat R1, R2;
